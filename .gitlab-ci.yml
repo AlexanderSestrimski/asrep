@@ -1,0 +1,10 @@
+stages:
+  - test
+
+test_flask:
+  stage: test
+  image: python:3.8
+  before_script:
+    - pip install flask pytest
+  script:
+    - pytest
